@@ -1,0 +1,11 @@
+How does your gem take advantage of Ruby’s metaprogramming capabilities?
+It has DRY code bacause of great metaprogramming in Ruby.
+
+How long did you spend working on this project?
+3-4 hours.
+
+What was the most rewarding challenge you conquered?
+None.
+
+Where do you still have room to grow?
+More practice metaprogramming.

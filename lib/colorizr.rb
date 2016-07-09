@@ -12,8 +12,6 @@ class String
     black: '30',
   }
 
-  @@colors.keys.each { |method| define_method(method) { "\e[#{@@colors[method]}m" + self + "\e[0m" } }
-
   class << self
     def colors
       @@colors.keys
@@ -22,5 +20,10 @@ class String
     def sample_colors
       @@colors.keys.each { |color| puts 'This is ' + color.to_s.send(color) }
     end
+
+    def create_colors
+      @@colors.keys.each { |method| define_method(method) { "\e[#{@@colors[method]}m" + self + "\e[0m" } }
+    end
   end
 end
+String.create_colors
