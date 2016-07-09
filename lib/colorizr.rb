@@ -12,6 +12,8 @@ class String
     black: '30',
   }
 
+  @@colors.keys.each { |method| define_method(method) { "\e[#{@@colors[method]}m" + self + "\e[0m" } }
+
   class << self
     def colors
       @@colors.keys
