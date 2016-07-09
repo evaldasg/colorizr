@@ -18,5 +18,9 @@ class String
     def colors
       @@colors.keys
     end
+
+    def sample_colors
+      @@colors.keys.each { |color| puts 'This is ' + color.to_s.send(color) }
+    end
   end
 end
